@@ -9,14 +9,14 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'src/**/*.js',
+        src: 'src/js/*.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
     },
     connect: {
 	    server: {
 	      options: {
-	        port: 9001,
+	        port: 80,
 	        base: 'src',
 	        keepalive:true
 	      }

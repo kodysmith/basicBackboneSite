@@ -15,16 +15,17 @@ define([
   'views/home/HeaderView',
   'views/home/FooterView',
   'views/home/HomeView',
+  'views/about/AboutView',
   'views/search_results/ProjectListView',
   'views/search_results/ProjectGridView',
   'views/search_forms/ProjectSearchFormView',
-], function($, _, Backbone, HeaderView, FooterView, HomeView, ProjectListView, ProjectGridView, ProjectSearchFormView) {
+], function($, _, Backbone, HeaderView, FooterView, HomeView, AboutView, ProjectListView, ProjectGridView, ProjectSearchFormView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      "": "index",  // index with no slash
-      "/": "index", // index with one trailing slash
+      "(/)": "index",  // index with no slash
+      "/about(/)": "about", // index with one trailing slash
       "/#":"index", // index with a hash 
       "projects/list/:searchString":"projectsList",  // display movies search list view using "searchString"
       "projects/grid/:searchString":"projectsGrid",  // display movies search grid view using "searchString"
@@ -34,6 +35,9 @@ define([
     index: function(){
       var homeView = new HomeView();
       homeView.render();
+    },
+    about: function(){
+      var aboutView = new AboutView();
     },
     // moviesList function displays and processes search results based on URL "searchString"
     projectsList: function(searchString){
