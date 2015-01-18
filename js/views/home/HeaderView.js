@@ -17,7 +17,7 @@ define([
       this.$el.html(headerTemplate);   
     }
   });
-
+  
   return HeaderView;
   
 });
