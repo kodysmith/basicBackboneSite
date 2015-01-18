@@ -1,0 +1,10 @@
+<span class=".main">
+	<ul>
+	<% _.each(mainMenu, function(mainMenu){ %>
+		<li>
+			<a href="<%= mainMenu.get("url") %>"><%= mainMenu.get("title") %></a>
+		</li>
+		<% } %>
+	<% }); %>
+	</ul>
+</span>
