@@ -18,7 +18,8 @@ define([
   'views/search_results/ProjectListView',
   'views/search_results/ProjectGridView',
   'views/search_forms/ProjectSearchFormView',
-], function($, _, Backbone, HeaderView, FooterView, HomeView, ProjectListView, ProjectGridView, ProjectSearchFormView) {
+  'views/profilePage/ProfileView'
+], function($, _, Backbone, HeaderView, FooterView, HomeView, ProjectListView, ProjectGridView, ProjectSearchFormView, ProfileView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -26,6 +27,7 @@ define([
       "": "index",  // index with no slash
       "/": "index", // index with one trailing slash
       "/#":"index", // index with a hash 
+      "profile(/)": "profilePage", // profile page
       "projects/list/:searchString":"projectsList",  // display movies search list view using "searchString"
       "projects/grid/:searchString":"projectsGrid",  // display movies search grid view using "searchString"
       "*actions": "defaultRoute" // Backbone will try match the route above first
@@ -34,6 +36,10 @@ define([
     index: function(){
       var homeView = new HomeView();
       homeView.render();
+    },
+    profilePage: function(){
+      var profileView = new ProfileView();
+      profileView.render();
     },
     // moviesList function displays and processes search results based on URL "searchString"
     projectsList: function(searchString){
