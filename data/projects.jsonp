@@ -15,7 +15,7 @@
     },
 "synopsis":"",
 "posters":{
-    "thumbnail":"http://d3biamo577v4eu.cloudfront.net/static/images/redesign/poster_default_thumb.gif"
+    "thumbnail":"/assets/images/githubKsmith.png"
     },
 "links":{
 "github":"http://github.com/kodysmith/searchProject",
@@ -36,7 +36,7 @@
     },
 "synopsis":"",
 "posters":{
-    "thumbnail":"http://d3biamo577v4eu.cloudfront.net/static/images/redesign/poster_default_thumb.gif"
+    "thumbnail":"/assets/images/ksmith.jpg"
     },
 "links":{
 "github":"http://github.com/kodysmith/searchProject",
@@ -57,7 +57,7 @@
     },
 "synopsis":"",
 "posters":{
-    "thumbnail":"http://d3biamo577v4eu.cloudfront.net/static/images/redesign/poster_default_thumb.gif"
+    "thumbnail":"/assets/images/matrix.png"
     },
 "links":{
 "github":"http://github.com/kodysmith/matrixDropAnimation",
@@ -125,5 +125,47 @@
 "links":{
 "github":"http://github.com/kodysmith/searchProject",
 "url":"/app-movieSearch/"
+}},
+{
+"title":"StubHub",
+"year":2015,
+"mpaa_rating":"Unrated",
+"runtime":"",
+"release_dates":{
+    "written":"2015-1-1"
+    },
+"ratings":{
+    "critics_score":-1,
+    "audience_rating":"Spilled",
+    "audience_score":50
+    },
+"synopsis":"Current Project",
+"posters":{
+    "thumbnail":"http://d3biamo577v4eu.cloudfront.net/static/images/redesign/poster_default_thumb.gif"
+    },
+"links":{
+"github":"http://github.com/kodysmith/searchProject",
+"url":"http://m.stubhub.com/?unified=1&performer_id=801"
+}},
+{
+"title":"Clorox.com",
+"year":2014,
+"mpaa_rating":"2013-2015",
+"runtime":"",
+"release_dates":{
+    "written":"2014-12-1"
+    },
+"ratings":{
+    "critics_score":-1,
+    "audience_rating":"Spilled",
+    "audience_score":50
+    },
+"synopsis":"Past Project",
+"posters":{
+    "thumbnail":"http://d3biamo577v4eu.cloudfront.net/static/images/redesign/poster_default_thumb.gif"
+    },
+"links":{
+"github":"",
+"url":"http://www.clorox.com"
 }}
 ]}
