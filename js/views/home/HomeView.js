@@ -9,10 +9,8 @@ define([
   'backbone',
   'views/search_results/ProjectGridView',
   'components/slideShow/js/views/SlideShowView',
-  'text!templates/home/homeTemplate.html',
-  'text!templates/search_forms/movieSearchFormTemplate.html'
-
-], function($, _, Backbone, ProjectGridView, SlideShowView, homeTemplate, movieSearchFormTemplate){
+  'text!templates/home/homeTemplate.html'
+], function($, _, Backbone, ProjectGridView, SlideShowView, homeTemplate){
 
   var HomeView = Backbone.View.extend({
 

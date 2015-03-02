@@ -1,6 +1,6 @@
 /**
- * Header View is to display the main site header
- * template: headerTemplate.html
+ * Slide Show View is to display a slideshow where you instantiate it
+ * template: SlideShowTemplate.html
  */
 
 define([
@@ -19,7 +19,7 @@ define([
 
     },
     render: function(){
-      // instantiate a new movie collection class to get search results
+      // instantiate a new image collection class to get search results
       
       this.$el.html('yo slideshow');
       // fetch the data from the source using the search string populated by the search form
@@ -27,9 +27,9 @@ define([
         reset: true
       });
       
-      // clear the existing results for a new search, and then display the results using the movie model
+      // clear the existing results for a new search, and then display the results using the image model
       this.collection.bind('reset', function () { 
-        debugger
+        
         imageData = this.model; 
         var data = {
                       results: this.model,
