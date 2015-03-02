@@ -8,22 +8,36 @@ define([
   'underscore',
   'backbone',
   'views/search_results/ProjectGridView',
+  'components/slideShow/js/views/SlideShowView',
   'text!templates/home/homeTemplate.html',
   'text!templates/search_forms/movieSearchFormTemplate.html'
 
-], function($, _, Backbone, ProjectGridView, homeTemplate, movieSearchFormTemplate){
+], function($, _, Backbone, ProjectGridView, SlideShowView, homeTemplate, movieSearchFormTemplate){
 
   var HomeView = Backbone.View.extend({
+
     el: $("#page"),
+    subEl: {},
+    subViews: {},
+    initialize: function(){
+      this.$el.html(homeTemplate);  
+      this.subViews.slideShowView = new SlideShowView({el: $("#searchFormHolder")});
+      this.subViews.projectGridView = new ProjectGridView({el:$('#searchResults')});
+      
+    },
+    
+    
+
     render: function(){
         // display home template to the defined element "el"
-        this.$el.html(homeTemplate);   
         
         // display the search form on the home screen
         // demonstrating how you can pass element selector or other values to models to manipulate their
         // result destination 
-        var projectGridView = new ProjectGridView({el:$('#searchFormHolder')});
-        projectGridView.render();
+        this.subViews.slideShowView.render();
+        this.subViews.projectGridView.render();
+
+        
     }
   });
 

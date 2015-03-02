@@ -1,0 +1,8 @@
+Slideshow
+<div id="mainSlideshow">
+	<% _.each(results, function(result){ %>
+		<li>
+        	<img  src="<%= result.get('url') %>" alt="<%= result.get('description') %>"/>
+       	</li>
+  	<% }); %>
+</div>
