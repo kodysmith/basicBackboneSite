@@ -32,3 +32,13 @@
   padding-top: 20px;
   padding-bottom: 50px;
 }
+
+@media print{
+  section{
+    display: none !important; 
+  }
+  section:after {
+    content: 'no printing';
+  }
+
+}

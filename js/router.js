@@ -12,14 +12,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/home/HeaderView',
+  'components/header/comp',
   'views/home/FooterView',
   'views/home/HomeView',
   'views/search_results/ProjectListView',
   'views/search_results/ProjectGridView',
   'views/search_forms/ProjectSearchFormView',
-  'views/profilePage/ProfileView'
-], function($, _, Backbone, HeaderView, FooterView, HomeView, ProjectListView, ProjectGridView, ProjectSearchFormView, ProfileView) {
+  'views/profilePage/ProfileView',
+  'text!templates/home/homeTemplate.html'
+], function($, _, Backbone, HeaderComponent, FooterView, HomeView, ProjectListView, ProjectGridView, ProjectSearchFormView, ProfileView, HeaderTemplate) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -34,8 +35,8 @@ define([
     },
     // index function displays the default home screen 
     index: function(){
-      var homeView = new HomeView();
-      homeView.render();
+      var headerComponent = new HeaderComponent({el:"#header", headerTemplate:HeaderTemplate});
+      headerComponent.render();
     },
     profilePage: function(){
       var profileView = new ProfileView();
@@ -60,8 +61,8 @@ define([
     var app_router = new AppRouter;
     
     // display the header at all times
-    var headerView = new HeaderView();
-    headerView.render();
+    var headerComponent = new HeaderComponent({el:"#footer"});
+    headerComponent.render();
     
     // the purpose of this app is to Search for movies, so this should display always
     var projectSearchFormView = new ProjectSearchFormView();
@@ -69,7 +70,7 @@ define([
 
     // display the footer at all times
     var footerView = new FooterView();    
-    footerView.render();
+    //footerView.render();
     
     Backbone.history.start();
   };

@@ -34,6 +34,16 @@ module.exports = function(grunt) {
 			},
 		}
 	},
+  sass: {
+    dist: {                            // Target
+      options: {                       // Target options
+        style: 'expanded'
+      },
+      files: {                         // Dictionary of files
+        'src/css/styles.css': 'src/css/screen.scss',       // 'destination': 'source'
+      }
+    }
+  },
 	watch: {
         files: "./src/css/**/*",
         tasks: ["less"]
@@ -75,10 +85,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-git');
-
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  
+  grunt.registerTask('compile', ['sass']);
   grunt.registerTask('server',['connect']);
   grunt.registerTask('setup',['gitclone:matrix','gitclone:lydia','gitclone:searchProject']);
   // Default task(s).
-  grunt.registerTask('default', ['uglify','less', 'connect']);
+  grunt.registerTask('default', ['sass', 'connect']);
 
 };
