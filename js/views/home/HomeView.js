@@ -32,7 +32,7 @@ define([
         // display the search form on the home screen
         // demonstrating how you can pass element selector or other values to models to manipulate their
         // result destination 
-        this.subViews.slideShowView.render();
+        //this.subViews.slideShowView.render();
         this.subViews.projectGridView.render();
 
         
