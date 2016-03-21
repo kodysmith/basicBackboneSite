@@ -41,7 +41,7 @@
 {
 "title":"Matrix Animation",
 "year":2014,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"",
 "runtime":"",
 "release_dates":{
     "written":"2014-11-20"
@@ -98,7 +98,7 @@
 {
 "title":"Movie Search",
 "year":2014,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"",
 "runtime":"",
 "release_dates":{
     "written":"2014-11-20"
