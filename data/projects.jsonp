@@ -3,7 +3,7 @@
 {
 "title":"GitHub",
 "year":2014,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"",
 "runtime":"",
 "release_dates":{
     "written":"2014-11-20"
@@ -22,7 +22,7 @@
 {
 "title":"LinkedIn",
 "year":2014,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"",
 "runtime":"",
 "release_dates":{
     "written":"2014-11-20"
@@ -60,7 +60,7 @@
 {
 "title":"Node Server",
 "year":2015,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"",
 "runtime":"",
 "release_dates":{
     "written":"2015-2-10"
@@ -79,7 +79,7 @@
 {
 "title":"Grunt Server",
 "year":2015,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"",
 "runtime":"",
 "release_dates":{
     "written":"2015-2-10"
@@ -117,7 +117,7 @@
 {
 "title":"StubHub",
 "year":2015,
-"mpaa_rating":"Unrated",
+"mpaa_rating":"Current FTE",
 "runtime":"",
 "release_dates":{
     "written":"2015-1-1"
